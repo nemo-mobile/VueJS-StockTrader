@@ -5,9 +5,7 @@
       <span class="font-weight-light">Trader</span>
     </v-toolbar-title>
     <v-toolbar-items>
-      <v-btn text to="/">Home</v-btn>
-      <v-btn text to="/stocks">Stocks</v-btn>
-      <v-btn text to="/portfolio">Portfólio</v-btn>
+      <v-btn text v-for="(route, index) in routes" :to="route.path" :key="index"> {{route.title}} </v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-toolbar-items>
@@ -34,7 +32,12 @@ export default {
   data() {
     return {
       closeOnClick: true,
-      offset: true
+      offset: true,
+      routes: [
+          { title: 'Home', path: '/'},
+          { title: 'Stocks', path: '/stocks'},
+          { title: 'Portfólio', path: '/portfolio'}
+      ]
     };
   }
 };
