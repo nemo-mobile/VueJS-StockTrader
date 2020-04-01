@@ -9,13 +9,18 @@
     </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-toolbar-items>
+<<<<<<< HEAD
       <v-btn @click="endDay" text>Finalizar Dia</v-btn>
+=======
+      <v-btn text>Finalizar Dia</v-btn>
+>>>>>>> 93f30c551483451f143c2c3d1fe9b547fe5de6a9
       <v-menu bottom :close-on-click="closeOnClick" :offset-y="offset">
         <template v-slot:activator="{ on }">
           <v-btn text v-on="on">Salvar & Carregar</v-btn>
         </template>
         <v-list>
           <v-list-item>
+<<<<<<< HEAD
             <v-list-item-title @click="saveData">Salvar Dados</v-list-item-title>
           </v-list-item>
           <v-list-item>
@@ -26,6 +31,15 @@
       <v-layout align-center>
         <span class="text-uppercase grey--text text--darken-2">Saldo: {{funds | currency}}</span>
       </v-layout>
+=======
+            <v-list-item-title>Salvar Dados</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>Carregar Dados</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+>>>>>>> 93f30c551483451f143c2c3d1fe9b547fe5de6a9
     </v-toolbar-items>
   </v-app-bar>
 </template>
@@ -42,6 +56,7 @@ export default {
           { title: 'Portfólio', path: '/portfolio'}
       ]
     };
+<<<<<<< HEAD
   },
   computed: {
     funds(){
@@ -59,6 +74,8 @@ export default {
     loadData(){
       this.$store.dispatch('loadData')
     }
+=======
+>>>>>>> 93f30c551483451f143c2c3d1fe9b547fe5de6a9
   }
 };
 </script>
