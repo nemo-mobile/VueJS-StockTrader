@@ -13,6 +13,9 @@
  - Vue Router: Utilizado para criar e registrar as rotas da aplicação;
  - Vuex: Utilizado para realizar o gerenciamento de estado da aplicação.
  
+ ## Referência:
+ - https://www.udemy.com/course/vue-js-completo/
+ 
 ## Project setup
 ```
 npm install
