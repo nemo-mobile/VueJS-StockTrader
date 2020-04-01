@@ -10,7 +10,7 @@ export default {
             if (record){
                 record.quantity += quantity
             } else {
-                state.stocks.push({
+                state.stocks.push({ 
                     id: id,
                     quantity: quantity
                 })
@@ -25,6 +25,10 @@ export default {
                 state.stocks.splice(state.stocks.indexOf(record), 1);
             }
             state.funds += price * quantity;
+        },
+        setPortfolio(state, portfolio){
+            state.funds = portfolio.funds
+            state.stocks = portfolio.stockPortfolio ? portfolio.stockPortfolio : []
         }
     },
     actions: {

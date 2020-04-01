@@ -1,16 +1,26 @@
 <template>
   <div>
-    <h1>Negocie e Consulte suas Ações</h1>
-    <v-sheet color="primary">
-      <v-icon>Info</v-icon>
-      <span>Você pode Salvar & Carregar os Dados</span>
+    <h1 class="display-2 font-weight-light my-4">Negocie e Consulte suas Ações</h1>
+    <v-sheet :elevation="6" color="primary" class="d-flex pa-2">
+      <v-icon class="white--text mr-3">info</v-icon>
+      <span class="headline white--text font-weight-light">Você pode Salvar & Carregar os Dados</span>
     </v-sheet>
+    <v-sheet :elevation="6" color="success darken-1" class="d-flex pa-2 mt-3" aling-center>
+      <v-icon class="white--text mr-3">info</v-icon>
+      <span class="headline white--text font-weight-light">Clique em 'Finalizar Dia' para iniciar um novo dia!</span>
+    </v-sheet>
+    <v-divider class="my-4"/>
+    <p class="display-1"><strong>Seu Saldo:</strong> {{ funds | currency }}</p>
   </div>
 </template>
 
 <script>
 export default {
-
+  computed: {
+    funds(){
+      return this.$store.getters.funds
+    }
+  }
 }
 </script>
 
