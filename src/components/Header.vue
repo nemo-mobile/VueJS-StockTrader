@@ -1,3 +1,4 @@
+  <template>
   <v-app-bar app>
     <v-toolbar-title class="headline text-uppercase mr-4">
       <span>Stock</span>
